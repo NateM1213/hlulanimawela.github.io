@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -12,132 +13,286 @@ body{
 
 }
 
+/* Navigation */
+
 nav{
 
-display:flex;
+    position:fixed;
 
-justify-content:space-between;
+    width:100%;
 
-align-items:center;
+    top:0;
 
-padding:25px 10%;
+    left:0;
 
-background:#111827;
+    display:flex;
 
-position:fixed;
+    justify-content:space-between;
 
-width:100%;
+    align-items:center;
 
-top:0;
+    padding:20px 10%;
+
+    background:#111827;
+
+    z-index:1000;
 
 }
 
-nav h2{
+.logo{
 
-color:#3b82f6;
+    color:#3b82f6;
+
+    font-size:32px;
+
+    font-weight:bold;
 
 }
 
 nav ul{
 
-display:flex;
+    list-style:none;
 
-list-style:none;
+    display:flex;
 
-gap:30px;
-
-}
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
+    gap:30px;
 
 }
 
-nav a:hover{
+nav ul li a{
 
-color:#3b82f6;
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
 
 }
+
+nav ul li a:hover{
+
+    color:#3b82f6;
+
+}
+
+/* Hero */
 
 .hero{
 
-height:100vh;
+    height:100vh;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-text-align:center;
+    text-align:center;
 
-padding:20px;
+    padding:20px;
+
+}
+
+.hero-content{
+
+    max-width:900px;
 
 }
 
 .hero h1{
 
-font-size:60px;
+    font-size:70px;
 
-margin-bottom:15px;
+    margin-bottom:20px;
 
 }
 
 .hero span{
 
-color:#3b82f6;
+    color:#3b82f6;
 
 }
 
 .hero h2{
 
-font-size:28px;
+    font-size:30px;
 
-margin-bottom:20px;
-
-font-weight:normal;
+    margin-bottom:20px;
 
 }
 
 .hero p{
 
-font-size:20px;
+    font-size:22px;
 
-max-width:700px;
+    line-height:1.8;
 
-margin:auto;
+    margin-bottom:40px;
 
-line-height:1.7;
+}
 
-margin-bottom:40px;
+/* Buttons */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
 
 }
 
 .btn{
 
-background:#2563eb;
+    background:#2563eb;
 
-padding:15px 40px;
+    color:white;
 
-border-radius:10px;
+    padding:15px 35px;
 
-text-decoration:none;
+    border-radius:8px;
 
-color:white;
+    text-decoration:none;
 
-font-weight:bold;
-
-transition:.3s;
+    font-weight:bold;
 
 }
 
 .btn:hover{
 
-background:#1d4ed8;
+    background:#1d4ed8;
+
+}
+
+.btn-secondary{
+
+    border:2px solid #2563eb;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.btn-secondary:hover{
+
+    background:#2563eb;
+
+}
+
+/* Sections */
+
+section{
+
+    padding:100px 10%;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:40px;
+
+    color:#3b82f6;
+
+}
+
+section p{
+
+    text-align:center;
+
+    line-height:1.8;
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:20px;
+
+}
+
+/* Cards */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.card{
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:#2563eb;
+
+}
+
+/* Experience */
+
+.job{
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    margin-bottom:25px;
+
+}
+
+.job h3{
+
+    color:#3b82f6;
+
+    margin-bottom:10px;
+
+}
+
+.job h4{
+
+    margin-bottom:15px;
+
+}
+
+/* Footer Contact */
+
+#contact p{
+
+    margin-bottom:15px;
 
 }
